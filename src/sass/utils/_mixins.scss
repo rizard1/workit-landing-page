@@ -1,0 +1,8 @@
+// function to convert pixels to REM values
+
+$base-font-size: 16px;
+
+
+@function to-rem($pixels) {
+    @return ($pixels / $base-font-size)rem;
+}

@@ -1,0 +1,42 @@
+// Font used from the local setup
+
+@font-face {
+    font-family: 'Fraunces 144pt';
+    src: url(/public/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(/public/assets/fonts/manrope/static/Manrope-Regular.ttf);
+}
+
+$h-font: 'Fraunces 144pt';
+$p-font: 'Manrope';
+
+// Heading
+
+$h-large: ( 
+    font-family: $h-font,
+    font-size: to-rem(80px), // Large
+    line-spacing: to-rem(80px),
+);
+
+$h-medium: (
+    font-family: $h-font,
+    font-size: to-rem(56px), // Medium
+    line-spacing: to-rem(64px),
+);
+
+$h-small: (
+    font-family: $h-font,
+    font-size: to-rem(32px), // Small
+    line-spacing: to-rem(40px),
+);
+
+// Paragraph  
+
+$p-body: (
+    font-family: $p-font,
+    font-size: to-rem(18px),
+    line-spacing: to-rem(32px),
+);
