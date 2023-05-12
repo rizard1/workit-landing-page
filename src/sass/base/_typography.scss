@@ -2,41 +2,49 @@
 
 @font-face {
     font-family: 'Fraunces 144pt';
-    src: url(/public/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+    src: url(/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
 }
 
 @font-face {
     font-family: 'Manrope';
-    src: url(/public/assets/fonts/manrope/static/Manrope-Regular.ttf);
+    src: url(/assets/fonts/manrope/static/Manrope-Regular.ttf);
 }
 
 $h-font: 'Fraunces 144pt';
 $p-font: 'Manrope';
 
-// Heading
+// Heading desktop variants
 
-$h-large: ( 
+$d-h-large: ( 
     font-family: $h-font,
-    font-size: to-rem(80px), // Large
-    line-spacing: to-rem(80px),
+    font-size: px-rem(80px), // Large
+    line-spacing: px-rem(80px),
 );
 
-$h-medium: (
+$d-h-medium: (
     font-family: $h-font,
-    font-size: to-rem(56px), // Medium
-    line-spacing: to-rem(64px),
+    font-size: px-rem(56px), // Medium
+    line-spacing: px-rem(64px),
 );
 
-$h-small: (
+$d-h-small: (
     font-family: $h-font,
-    font-size: to-rem(32px), // Small
-    line-spacing: to-rem(40px),
+    font-size: px-rem(32px), // Small
+    line-spacing: px-rem(40px),
+);
+
+// Heading mobile variants
+
+$m-h-large: (
+    font-family: $h-font,
+    font-size: px-rem(50px), // Large
+    line-spacing: px-rem(50px),    
 );
 
 // Paragraph  
 
 $p-body: (
     font-family: $p-font,
-    font-size: to-rem(18px),
-    line-spacing: to-rem(32px),
+    font-size: px-rem(18px),
+    line-spacing: px-rem(32px),
 );

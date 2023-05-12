@@ -1,0 +1,13 @@
+.intro {
+    margin-top: px-rem(100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & > .headshot {
+        width: px-rem(280px);
+        aspect-ratio: 1 / 1;
+        margin-bottom: px-rem(-52px);
+    }
+
+}

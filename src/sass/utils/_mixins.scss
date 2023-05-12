@@ -1,8 +1,17 @@
-// function to convert pixels to REM values
+$breakpoints: (
+    'small': (min-width: 375px),
+    'medium': (min-width: 768px),
+    'large': (min-width: 1440px)
+);
 
-$base-font-size: 16px;
-
-
-@function to-rem($pixels) {
-    @return ($pixels / $base-font-size)rem;
+@mixin res-to($name) {
+    @if map-has-key($breakpoints, $name ) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Invalid value, as it does not exist in `#{$breakpoints}`."
+    }
 }

@@ -1,0 +1,8 @@
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-rem(40px);
+    padding: px-rem(96px) 0 px-rem(71px) 0;
+    background-color: $ghost-white;
+}

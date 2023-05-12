@@ -1,0 +1,36 @@
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    & > span {
+        font-family: $h-font;
+        font-size: px-rem(20px);
+        line-height: px-rem(36px);
+        color: $dark-purple;
+        padding: px-rem(5px) px-rem(16px);
+        width: px-rem(48px);
+        height: auto;
+        border: px-rem(1px) solid $davys-grey;
+        border-radius: 100%;
+        padding-bottom: px-rem(8px);
+    }
+
+    & > h2 {
+        font-family: $h-font;
+        font-size: px-rem(28px);
+        line-height: px-rem(36px);
+        font-weight: 600;
+        color: $dark-purple;
+    }
+
+    & > p {
+        font-family: $p-font;
+        font-size: 1rem;
+        line-height: px-rem(28px);
+        font-weight: 400;
+        color: $davys-grey;
+    }
+}
