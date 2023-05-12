@@ -8,13 +8,29 @@
     padding-top: px-rem(64px);
     background: linear-gradient(to bottom, $dark-purple 90%, $ghost-white 10%);
 
+    @include res-to("medium") {
+        padding-top: px-rem(56px);
+        height: px-rem(540px);
+    }
+
     .hero-content { 
+        @include res-to("medium") {
+            padding: 0 px-rem(128px) 0 px-rem(128px);
+        }
+
         & > h1 {
             @each $property, $value in $m-h-large {
                 #{$property}: $value;
             }
             color: white;
             padding-bottom: px-rem(40px);
+
+            @include res-to("medium") {
+                @each $property, $value in $t-h-large {
+                    #{$property}: $value;
+                }
+
+            }
 
             & > span {
                 border-bottom: $underlineStyle;
@@ -27,5 +43,9 @@
         width: 320px;
         height: auto;
         aspect-ratio: 16 / 9;
+
+        @include res-to("medium") {
+            width: px-rem(514px);
+        }
     }
 }

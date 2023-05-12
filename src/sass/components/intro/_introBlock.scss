@@ -6,14 +6,29 @@
     gap: 1rem;
     text-align: center;
     background-color: $dark-purple;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem;
     color: white;
+
+    @include res-to("medium") {
+        margin: 0 px-rem(40px) 0 px-rem(214px);
+        text-align: left;
+        padding: 2rem 0;
+        max-width: px-rem(572px);
+    }
 
     & > span {
         @each $property, $value in $d-h-small {
             #{$property}: $value;
         }
         font-weight: 600;
+
+        @include res-to("medium") {
+            font-size: px-rem(48px);
+            line-height: px-rem(56px);
+            width: 100%;
+            text-align: left;
+            padding: 1rem 0 0 px-rem(56px);
+        }
     }
 
     & > p {
@@ -22,5 +37,9 @@
         line-height: px-rem(28px);
         font-weight: 400;
         padding: 0 px-rem(15px) 0.5rem px-rem(15px);
+
+        @include res-to("medium") {
+            padding: 0 px-rem(56px) 0.5rem px-rem(56px);
+        }
     }
 }
