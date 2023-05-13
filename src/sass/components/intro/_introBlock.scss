@@ -1,4 +1,5 @@
 .introBlock {
+    position: relative;
     margin: 0 1rem 0 1rem;
     display: flex;
     flex-direction: column;
@@ -64,6 +65,19 @@
             @each $property, $value in $p-body {
                 #{$property}: $value;
             }
+        }
+    }
+
+    & > img {
+        display: none;
+
+        @include res-to("large") {
+            display: block;
+            position: absolute;
+            inset: 16rem 27rem;
+            height: auto;
+            width: auto;
+            z-index: 100;
         }
     }
 }

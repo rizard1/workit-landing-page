@@ -12,6 +12,11 @@
         gap: px-rem(32px);
     }
 
+    @include res-to("large") {
+        flex-direction: column;
+        text-align: center;
+    }
+
     & > span {
         font-family: $h-font;
         font-size: px-rem(20px);
@@ -23,6 +28,12 @@
         border: px-rem(1px) solid $davys-grey;
         border-radius: 100%;
         padding-bottom: px-rem(8px);
+
+        @include res-to("large") {
+            width: px-rem(56px);
+            height: px-rem(56px);
+            padding: px-rem(8px) px-rem(23.5px);
+        }
     }
 
     .featureCard__content {
@@ -36,6 +47,12 @@
         line-height: px-rem(36px);
         font-weight: 600;
         color: $dark-purple;
+
+        @include res-to("large") {
+            @each $property, $value in $d-h-small {
+                #{$property}: $value;
+            }
+        }
     }
 
     & > p {
@@ -44,6 +61,12 @@
         line-height: px-rem(28px);
         font-weight: 400;
         color: $davys-grey;
+
+        @include res-to("large") {
+            @each $property, $value in $p-body {
+                #{$property}: $value;
+            }
+        }
     }
 }
 }

@@ -13,6 +13,12 @@
         gap: px-rem(48px);
         padding: px-rem(155px) px-rem(98px);
     }
+
+    @include res-to("large") {
+        flex-direction: row;
+        gap: px-rem(26px);
+        padding: px-rem(255px) px-rem(161px) px-rem(171px) px-rem(165px);
+    }
 }
 
 .features::before {
