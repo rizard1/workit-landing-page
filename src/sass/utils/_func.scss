@@ -1,6 +1,0 @@
-// function to convert px to rem
-
-@function px-rem($px) {
-    @return calc(($px / 16px) * 1rem);
-    
-}
