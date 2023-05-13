@@ -18,19 +18,27 @@ $p-font: 'Manrope';
 $d-h-large: ( 
     font-family: $h-font,
     font-size: px-rem(80px), // Large
-    line-spacing: px-rem(80px),
+    line-height: px-rem(80px),
 );
 
 $d-h-medium: (
     font-family: $h-font,
     font-size: px-rem(56px), // Medium
-    line-spacing: px-rem(64px),
+    line-height: px-rem(64px),
 );
 
 $d-h-small: (
     font-family: $h-font,
     font-size: px-rem(32px), // Small
-    line-spacing: px-rem(40px),
+    line-height: px-rem(40px),
+);
+
+// Heading tablet variants
+
+$t-h-large: (
+    font-family: $h-font,
+    font-size: px-rem(60px),
+    line-height: px-rem(60px),
 );
 
 // Heading mobile variants
@@ -38,7 +46,7 @@ $d-h-small: (
 $m-h-large: (
     font-family: $h-font,
     font-size: px-rem(50px), // Large
-    line-spacing: px-rem(50px),    
+    line-height: px-rem(50px),    
 );
 
 // Paragraph  
@@ -46,5 +54,5 @@ $m-h-large: (
 $p-body: (
     font-family: $p-font,
     font-size: px-rem(18px),
-    line-spacing: px-rem(32px),
+    line-height: px-rem(32px),
 );

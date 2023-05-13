@@ -1,20 +1,49 @@
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: px-rem(64px);
-    height: px-rem(480px);
     padding-top: px-rem(64px);
-    background: linear-gradient(to bottom, $dark-purple 90%, $ghost-white 10%);
+    background-color: $ghost-white;
+
+    @include res-to("medium") {
+        padding-top: px-rem(56px);
+        height: px-rem(540px);
+    }
+
+    @include res-to("large") {
+        height: px-rem(650px);
+    }
 
     .hero-content { 
+        z-index: 2;
+        
+        @include res-to("medium") {
+            padding: 0 px-rem(128px) 0 px-rem(128px);
+        }
+
         & > h1 {
             @each $property, $value in $m-h-large {
                 #{$property}: $value;
             }
             color: white;
             padding-bottom: px-rem(40px);
+
+            @include res-to("medium") {
+                @each $property, $value in $t-h-large {
+                    #{$property}: $value;
+                }
+            }
+
+            @include res-to("large") {
+                @each $property, $value in $d-h-large {
+                    #{$property}: $value;
+                }
+                max-width: px-rem(635px);
+                padding-bottom: px-rem(37px);
+            }
 
             & > span {
                 border-bottom: $underlineStyle;
@@ -23,9 +52,39 @@
     }
 
     .hero-image {
+        z-index: 3;
         margin-top: 1rem;
         width: 320px;
         height: auto;
         aspect-ratio: 16 / 9;
+
+        @include res-to("medium") {
+            width: px-rem(514px);
+        }
+
+        @include res-to("large") {
+            width: px-rem(767px);
+        }
+    }
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 410px;
+    background-color: $dark-purple;
+    clip-path: ellipse(170% 100% at 50% 0);
+
+    @include res-to("medium") {
+        height: px-rem(480px);
+    }
+
+    @include res-to("large") {
+        height: px-rem(600px);
     }
 }

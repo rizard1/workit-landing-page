@@ -5,9 +5,18 @@
     align-items: center;
     
     & > .headshot {
-        width: px-rem(280px);
+        width: px-rem(281px);
         aspect-ratio: 1 / 1;
         margin-bottom: px-rem(-52px);
+
+        @include res-to("medium") {
+            margin: 0 px-rem(410px) px-rem(-130px) 0; 
+        }
+
+        @include res-to("large") {
+            width: px-rem(477px);
+            margin: 0 px-rem(800px) px-rem(-304px) 0;
+        }
     }
 
 }

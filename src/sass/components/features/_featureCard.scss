@@ -5,6 +5,13 @@
     text-align: center;
     gap: 1rem;
 
+    @include res-to("medium") {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: px-rem(32px);
+    }
+
     & > span {
         font-family: $h-font;
         font-size: px-rem(20px);
@@ -12,13 +19,18 @@
         color: $dark-purple;
         padding: px-rem(5px) px-rem(16px);
         width: px-rem(48px);
-        height: auto;
+        height: px-rem(46px);
         border: px-rem(1px) solid $davys-grey;
         border-radius: 100%;
         padding-bottom: px-rem(8px);
     }
 
-    & > h2 {
+    .featureCard__content {
+        display: flex;
+        flex-direction: column;
+        gap: px-rem(16px);
+
+     > h2 {
         font-family: $h-font;
         font-size: px-rem(28px);
         line-height: px-rem(36px);
@@ -33,4 +45,5 @@
         font-weight: 400;
         color: $davys-grey;
     }
+}
 }
