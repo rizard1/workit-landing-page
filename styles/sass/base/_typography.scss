@@ -1,0 +1,58 @@
+// Font used from the local setup
+
+@font-face {
+    font-family: 'Fraunces 144pt';
+    src: url(/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(/fonts/manrope/Manrope-VariableFont_wght.ttf);
+}
+
+$h-font: 'Fraunces 144pt';
+$p-font: 'Manrope';
+
+// Heading desktop variants
+
+$d-h-large: ( 
+    font-family: $h-font,
+    font-size: px-rem(80px), // Large
+    line-height: px-rem(80px),
+);
+
+$d-h-medium: (
+    font-family: $h-font,
+    font-size: px-rem(56px), // Medium
+    line-height: px-rem(64px),
+);
+
+$d-h-small: (
+    font-family: $h-font,
+    font-size: px-rem(32px), // Small
+    line-height: px-rem(40px),
+);
+
+// Heading tablet variants
+
+$t-h-large: (
+    font-family: $h-font,
+    font-size: px-rem(60px),
+    line-height: px-rem(60px),
+);
+
+// Heading mobile variants
+
+$m-h-large: (
+    font-family: $h-font,
+    font-size: px-rem(50px), // Large
+    line-height: px-rem(50px),    
+);
+
+// Paragraph  
+
+$p-body: (
+    font-family: $p-font,
+    font-size: px-rem(18px),
+    line-height: px-rem(32px),
+);

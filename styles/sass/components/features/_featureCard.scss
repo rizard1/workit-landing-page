@@ -1,0 +1,72 @@
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    @include res-to("medium") {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: px-rem(32px);
+    }
+
+    @include res-to("large") {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    & > span {
+        font-family: $h-font;
+        font-size: px-rem(20px);
+        line-height: px-rem(36px);
+        color: $dark-purple;
+        padding: px-rem(5px) px-rem(16px);
+        width: px-rem(48px);
+        height: px-rem(46px);
+        border: px-rem(1px) solid $davys-grey;
+        border-radius: 100%;
+        padding-bottom: px-rem(8px);
+
+        @include res-to("large") {
+            width: px-rem(56px);
+            height: px-rem(56px);
+            padding: px-rem(8px) px-rem(23.5px);
+        }
+    }
+
+    .featureCard__content {
+        display: flex;
+        flex-direction: column;
+        gap: px-rem(16px);
+
+     > h2 {
+        font-family: $h-font;
+        font-size: px-rem(28px);
+        line-height: px-rem(36px);
+        font-weight: 600;
+        color: $dark-purple;
+
+        @include res-to("large") {
+            @each $property, $value in $d-h-small {
+                #{$property}: $value;
+            }
+        }
+    }
+
+    & > p {
+        font-family: $p-font;
+        font-size: 1rem;
+        line-height: px-rem(28px);
+        font-weight: 400;
+        color: $davys-grey;
+
+        @include res-to("large") {
+            @each $property, $value in $p-body {
+                #{$property}: $value;
+            }
+        }
+    }
+}
+}

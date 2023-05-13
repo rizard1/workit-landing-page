@@ -1,0 +1,34 @@
+.features {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-rem(40px);
+    padding: px-rem(64px) px-rem(16px);
+    background-color: transparent;
+    z-index: 1;
+
+    @include res-to("medium") {
+        align-items: flex-start;
+        gap: px-rem(48px);
+        padding: px-rem(155px) px-rem(98px);
+    }
+
+    @include res-to("large") {
+        flex-direction: row;
+        gap: px-rem(26px);
+        padding: px-rem(255px) px-rem(161px) px-rem(171px) px-rem(165px);
+    }
+}
+
+.features::before {
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: $ghost-white;
+    clip-path: ellipse(170% 100% at 50% 0);
+}

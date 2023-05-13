@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-rem(58px);
+    margin: px-rem(74px) 0 px-rem(74px) 0;
+
+
+    .social-icons {
+        display: inline-flex;
+        flex-direction: row;
+        gap: px-rem(28px);
+        transition: filter 0.3s ease-in-out;
+
+        @include res-to("large") {
+           & > img:hover {
+                filter: brightness(0.2);
+            }
+        }
+    }
+}

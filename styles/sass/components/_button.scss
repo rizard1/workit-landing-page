@@ -1,0 +1,31 @@
+// Button variants
+
+.primaryBtn {
+    font-family: $p-font;
+    font-size: px-rem(18px);
+    font-weight: 700;
+    text-decoration: none;
+    line-height: px-rem(32px);
+    padding: px-rem(13px) px-rem(24.5px) px-rem(16px) px-rem(25.5px);
+    color: $dark-purple;
+    background-color: $primary-btn;
+}
+
+.primaryBtn:hover {
+    background-color: transparent;
+    outline: px-rem(2px) solid $primary-btn;
+    color: $primary-btn;
+}
+
+.secondaryBtn {
+    font-family: $p-font;
+    font-size: px-rem(18px);
+    font-weight: 700;
+    line-height: px-rem(32px);
+    color: white;
+    border-bottom: $underlineStyle;
+}
+
+.secondaryBtn:hover {
+    color: $primary-btn;
+}

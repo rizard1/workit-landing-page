@@ -1,0 +1,83 @@
+.introBlock {
+    position: relative;
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: $dark-purple;
+    padding: 2rem 1rem;
+    color: white;
+
+    @include res-to("medium") {
+        margin: 0 px-rem(40px) 0 px-rem(214px);
+        text-align: left;
+        padding: 2rem 0;
+        max-width: px-rem(572px);
+    }
+
+    @include res-to("large") {
+        align-items: flex-start;
+        padding: px-rem(64px) px-rem(64px);
+        max-width: px-rem(730px);
+        gap: 2rem;
+        margin-right: -1rem;
+    }
+
+    & > span {
+        @each $property, $value in $d-h-small {
+            #{$property}: $value;
+        }
+        font-weight: 600;
+
+        @include res-to("medium") {
+            font-size: px-rem(48px);
+            line-height: px-rem(56px);
+            width: 100%;
+            text-align: left;
+            padding: 1rem 0 0 px-rem(56px);
+        }
+
+        @include res-to("large") {
+            padding: 0;
+            @each $property, $value in $d-h-medium {
+                #{$property}: $value;
+            }
+            width: 100%;
+        }
+    }
+
+    & > p {
+        font-family: $p-font;
+        font-size: 1rem;
+        line-height: px-rem(28px);
+        font-weight: 400;
+        padding: 0 px-rem(15px) 0.5rem px-rem(15px);
+
+        @include res-to("medium") {
+            padding: 0 px-rem(56px) 0.5rem px-rem(56px);
+        }
+
+        @include res-to("large") {
+            padding: 0;
+
+            @each $property, $value in $p-body {
+                #{$property}: $value;
+            }
+        }
+    }
+
+    & > img {
+        display: none;
+
+        @include res-to("large") {
+            display: block;
+            position: absolute;
+            inset: 16rem 27rem;
+            height: auto;
+            width: auto;
+            z-index: 100;
+        }
+    }
+}
