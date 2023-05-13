@@ -85,6 +85,9 @@
     }
 
     @include res-to("large") {
+        background-image: url(/public/images/bg-pattern-1.svg), url(/public/images/bg-pattern-2.svg);
+        background-repeat: no-repeat;
+        background-position: -8.75rem 2rem, 81.5rem 15rem;
         height: px-rem(600px);
     }
 }

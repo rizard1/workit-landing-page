@@ -10,5 +10,12 @@ footer {
         display: inline-flex;
         flex-direction: row;
         gap: px-rem(28px);
+        transition: filter 0.3s ease-in-out;
+
+        @include res-to("large") {
+           & > img:hover {
+                filter: brightness(0.2);
+            }
+        }
     }
 }
