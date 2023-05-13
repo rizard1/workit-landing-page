@@ -16,6 +16,14 @@
         max-width: px-rem(572px);
     }
 
+    @include res-to("large") {
+        align-items: flex-start;
+        padding: px-rem(64px) px-rem(64px);
+        max-width: px-rem(730px);
+        gap: 2rem;
+        margin-right: -1rem;
+    }
+
     & > span {
         @each $property, $value in $d-h-small {
             #{$property}: $value;
@@ -29,6 +37,14 @@
             text-align: left;
             padding: 1rem 0 0 px-rem(56px);
         }
+
+        @include res-to("large") {
+            padding: 0;
+            @each $property, $value in $d-h-medium {
+                #{$property}: $value;
+            }
+            width: 100%;
+        }
     }
 
     & > p {
@@ -40,6 +56,14 @@
 
         @include res-to("medium") {
             padding: 0 px-rem(56px) 0.5rem px-rem(56px);
+        }
+
+        @include res-to("large") {
+            padding: 0;
+
+            @each $property, $value in $p-body {
+                #{$property}: $value;
+            }
         }
     }
 }

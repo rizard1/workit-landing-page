@@ -10,4 +10,8 @@ header {
     @include res-to('medium') {
         padding: px-rem(32px) px-rem(40px) 0 px-rem(40px);
     }
+
+    @include res-to("large") {
+        padding: px-rem(55px) px-rem(165px);
+    }
 }
