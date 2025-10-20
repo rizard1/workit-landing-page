@@ -1,0 +1,119 @@
+::after,
+::before,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* font */
+    --normal-font: 400;
+    --bold-font: 700;
+    --heavy-font: 900;
+
+    /* color */
+    --white: hsl(266, 100%, 99%);
+    --dark-blue: hsl(273, 85%, 13%);
+    --green: hsl(150, 100%, 63%);
+
+    /* border bottom */
+    --border-custom: 3px solid var(--green);
+}
+
+@font-face {
+    font-family: "fraunces";
+    src: url("fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "manrope";
+    src: url("fonts/manrope/Manrope-VariableFont_wght.ttf");
+}
+
+html {
+    font-size: 10px;
+    font-family: manrope, "sans-serif";
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    overflow-x: hidden;
+}
+
+/* background hero color */
+.background-hero {
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: calc(35rem + 30%);
+    top: 0;
+    background: var(--dark-blue);
+    border-radius: 0 0 50% 50%;
+    z-index: -270;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 4rem;
+}
+
+.head1 img {
+    aspect-ratio: 1;
+    width: 100px;
+}
+
+.head2 a {
+    font-size: 1.85rem;
+    text-decoration: none;
+    font-weight: var(--normal-font);
+    color: var(--white);
+    border-bottom: var(--border-custom);
+}
+
+#hero {
+    display: grid;
+    place-content: center;
+    /* text-align: center; */
+    width: 80%;
+    /* text-wrap: wrap; */
+}
+
+#hero h1 {
+    font-family: fraunces, sans-serif;
+    font-weight: var(--normal-font);
+    font-size: 5rem;
+    color: var(--white);
+}
+
+#hero h1 span {
+    border-bottom: var(--border-custom);
+}
+
+img {
+    width: 90%;
+}
+
+button {
+    width: fit-content;
+    padding: 2rem 4rem;
+    color: var(--dark-blue);
+    font-size: 1.45rem;
+    font-weight: var(--bold-font);
+    background-color: var(--green);
+    border: none;
+    margin: 4rem auto;
+}
+
+/* article section */
+/* #article-section {
+    display: grid;
+    margin-block: 5rem;
+} */
