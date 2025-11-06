@@ -37,21 +37,23 @@ html {
 }
 
 body {
+    position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-inline: 1rem;
+    padding-inline: 5rem;
     overflow-x: hidden;
 }
 
 /* background hero color */
+
 .background-hero {
     display: block;
     position: absolute;
     width: 200%;
-    height: calc(35rem + 25%);
+    height: clamp(55rem, 50vw, 120rem);
     top: 0;
     background: var(--dark-blue);
     border-radius: 0 0 50% 50%;
@@ -92,7 +94,7 @@ header {
 #hero h1 {
     font-family: fraunces, sans-serif;
     font-weight: var(--normal-font);
-    font-size: 5rem;
+    font-size: clamp(5rem, 5vw, 7rem);
     color: var(--white);
 }
 
@@ -121,15 +123,24 @@ button {
 #article-section {
     color: var(--dark-blue);
 }
+
+.par {
+    display: flex;
+    flex-direction: column;
+}
+
 .round-num {
-    border: 1px solid var(--black);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    padding: 1rem;
     display: grid;
     place-content: center;
     margin-inline: auto;
-    margin-block: 2rem;
+}
+
+.round-num .section-num {
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    padding: 2rem;
 }
 
 .section-num {
@@ -138,7 +149,7 @@ button {
     font-weight: var(--bold-font);
 }
 
-#article-section article p {
+.num-article p {
     font-family: manrope, sans-serif;
     font-size: 1.55rem;
     margin-block-start: 2rem;
@@ -148,7 +159,7 @@ button {
 .image-founder {
     aspect-ratio: 1;
     margin-block-start: 20rem;
-    width: 75%;
+    width: 30rem;
     position: relative;
     z-index: -20;
 }
@@ -156,19 +167,24 @@ button {
 #image-section article {
     background-color: var(--dark-blue);
     color: var(--white);
-    padding: 3rem 2rem 0rem 2rem;
+    padding: 2.75rem;
     margin-block-start: -4rem;
 }
 
 #image-section article h2 {
     font-family: fraunces, sans-serif;
-    font-size: 2.45rem;
+    font-size: 3rem;
+    font-weight: var(--normal-font);
 }
 
 #image-section article p {
     font-size: 1.55rem;
-    margin-block-start: 3rem;
+    margin-block: 3rem;
     line-height: 1.9;
+}
+
+#image-section article button {
+    margin-block: 0;
 }
 
 /* footer section */
@@ -186,3 +202,72 @@ footer {
 .logo {
     aspect-ratio: 1;
 }
+
+/* Tablet design */
+@media screen and (min-width:680px) {
+    .par {
+        flex-direction: row;
+        column-gap: 5rem;
+        margin-block: 2.75rem;
+    }
+
+    .num-article {
+        text-align: left;
+    }
+
+    .image-founder {
+        margin-inline-start: -49%;
+    }
+
+    #image-section article h2 {
+        font-size: 5rem;
+    }
+
+    #image-section article {
+        text-align: left;
+        margin-inline-start: 30%;
+        margin-block-start: -13rem;
+        padding: 5%;
+    }
+}
+
+/* Desktop design */
+@media screen and (min-width:1024px) {
+    #article-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .par {
+        flex-direction: column;
+    }
+
+    .num-article {
+        text-align: center;
+    }
+
+    .image-founder {
+        scale: 1.5;
+    }
+
+    #image-section article {
+        margin-inline-start: 35%;
+        margin-block-start: -20rem;
+    }
+}
+
+/* #pat-box {
+    display: grid;
+    position: relative;
+    width: 2000px;
+    background-color: blue;
+    height: inherit;
+    place-content: center;
+}
+
+
+#pat-box .background-pat1 {
+    position: absolute;
+    top: 10px;
+}  */
